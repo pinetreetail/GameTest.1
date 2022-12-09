@@ -37,7 +37,7 @@ void Player::init()
 	Dead = false;
 }
 
-void Player::update()
+void Player::update(Shot shot)
 {
 	if (Dead)	return;
 
@@ -88,6 +88,10 @@ void Player::update()
 			space = -1;
 			for (int i = 0; i < 10; i++)
 			{
+
+
+
+
 
 			}
 

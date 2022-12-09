@@ -3,6 +3,8 @@
 #include "game.h"
 #include "DxLib.h"
 
+#include "Shot.h"
+
 struct Player
 {
 public:
@@ -10,7 +12,7 @@ public:
 	virtual ~Player();
 
 	void init();
-	void update();
+	void update(Shot shot);
 	void draw();
 
 private:

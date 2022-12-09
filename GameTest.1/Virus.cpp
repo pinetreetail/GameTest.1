@@ -23,7 +23,7 @@ Virus::~Virus()
 
 void Virus::init()
 {
-	posX = GetRand(Game::kScreenWidth - sizeOutside);
+	posX = GetRand((Game::kScreenWidth - sizeOutside));
 	posY = 0;
 	sizeOutside = 60;
 	sizeInside = 20;
