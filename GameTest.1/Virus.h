@@ -3,11 +3,11 @@
 #include "game.h"
 #include "DxLib.h"
 
-struct Player
+class Virus
 {
 public:
-	Player();
-	virtual ~Player();
+	Virus();
+	virtual ~Virus();
 
 	void init();
 	void update();
@@ -19,10 +19,10 @@ private:
 	float sizeOutside;
 	float sizeInside;
 
-	float speedMax;
-	float Acc;
-	float currSpeedX;
-	float currSpeedY;
+	float speed;
+
+	int ColorOutside;
+	int ColorInside;
 
 	bool Dead;
 

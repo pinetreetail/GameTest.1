@@ -3,11 +3,13 @@
 #include "game.h"
 #include "DxLib.h"
 
-struct Player
+#include "Player.h"
+
+class Shot
 {
 public:
-	Player();
-	virtual ~Player();
+	Shot();
+	virtual ~Shot();
 
 	void init();
 	void update();
@@ -16,13 +18,9 @@ public:
 private:
 	float posX;
 	float posY;
-	float sizeOutside;
-	float sizeInside;
+	float size;
 
-	float speedMax;
-	float Acc;
-	float currSpeedX;
-	float currSpeedY;
+	float speed;
 
 	bool Dead;
 

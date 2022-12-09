@@ -3,6 +3,8 @@
 #include "game.h"
 
 #include "Player.h"
+#include "Virus.h"
+#include "Shot.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -22,10 +24,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// ダブルバッファモード
 	SetDrawScreen(DX_SCREEN_BACK);
 
-	
 	Player player;
+	Virus virus;
+	
+	
 	player.init();
-
+	virus.init();
+	
 
 	while (ProcessMessage() == 0)
 	{
@@ -35,8 +40,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		
 
 		player.update();
-		player.draw();
+		virus.update();
+		
 
+		player.draw();
+		virus.draw();
+		
 
 		// 裏画面を表画面に入れ替える
 		ScreenFlip();
